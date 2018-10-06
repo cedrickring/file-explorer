@@ -1,0 +1,32 @@
+@import "variables";
+
+$padding-left: 20px;
+
+:host {
+  width: 200px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $background;
+}
+
+.separator {
+  padding: 30px $padding-left 5px;
+  color: $gray-4;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.menu-item {
+  padding: 3px $padding-left;
+  color: $default-text;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 14px;
+
+  &.selected, &:hover {
+    background: $blue;
+  }
+}

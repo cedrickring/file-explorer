@@ -1,27 +1,35 @@
 # FileExplorer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+A file-explorer for windows with many great extensions (coming soon...) and an Linux/Mac like experience.
 
-## Development server
+**Note**: This program is currently only for Windows since I'm using Windows related commands like `wmic` etc.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setup
 
-## Code scaffolding
+Simply run `npm install` or `yarn`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Development
 
-## Build
+I'd recommend to run `yarn start` or `npm start` and then run electron via `yarn electron` or `npm run electron`
+so you can restart electron independently from Angular and use the hot-module replacement from Angular.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`client` contains all the electron/browser related files
+`src` contains all the Angular/renderer related files
+`shared` contains some models etc. that needs to be shared between browser/renderer
 
-## Running unit tests
+## Building
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Just run `yarn build-electron` or `npm run build-electron`.
 
-## Running end-to-end tests
+## Todo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Create context menu for files
+* Add search bar to search folders / files
+* Add a terminal (Git Bash / Powershell / Windows Shell)
+* Add SFTP option to copy files from / to remote servers
 
-## Further help
+Maybe in some later version: Add support for other OS
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Credits
+
+I'm currently using the file icons made by [Honza Dousek](https://www.iconfinder.com/iconsets/lexter-flat-colorfull-file-formats).

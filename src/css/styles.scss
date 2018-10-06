@@ -1,0 +1,20 @@
+@import "variables";
+@import "reboot";
+
+p, span {
+  color: $default-text;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5BC592;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #1E2126;
+}

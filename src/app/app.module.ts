@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FileMenuModule } from './file-menu/file-menu.module';
+import { HttpClientModule } from '@angular/common/http';
+import { WindowTopBarComponent } from './window-top-bar/window-top-bar.component';
+import { DirectoryModule } from './directory/directory.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    FileMenuModule,
+    DirectoryModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  declarations: [
+    AppComponent,
+    WindowTopBarComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {
+}

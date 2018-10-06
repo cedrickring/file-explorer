@@ -1,0 +1,8 @@
+@import "variables";
+
+main {
+  background-color: $gray-3;
+  height: calc(100vh - 32px);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}

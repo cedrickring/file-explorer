@@ -1,0 +1,45 @@
+@import "variables";
+
+.title-bar {
+  height: 32px;
+  width: 100%;
+  background-color: $gray-1;
+
+  display: flex;
+  justify-content: space-between;
+
+  &.draggable {
+    -webkit-app-region: drag;
+  }
+
+  .window-title {
+    color: white;
+    font-size: 12px;
+    line-height: 32px;
+    margin: 0;
+    padding-left: 15px;
+  }
+
+  .titlebar-controls {
+    -webkit-app-region: no-drag;
+
+    div {
+      display: inline-block;
+      height: 31px;
+      width: 45px;
+      margin: 1px 1px 0 0;
+      text-align: center;
+      line-height: 29px;
+
+      svg {
+        width: 10px;
+        height: 10px;
+        shape-rendering: crispEdges;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}

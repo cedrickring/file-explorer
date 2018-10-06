@@ -1,0 +1,4 @@
+<div class="crumb" *ngFor="let crumb of crumbs; let i = index">
+  <span class="file-name" (click)="goBackInHistory(crumb)">{{i == 0 ? crumb : crumb.name}}</span>
+  <span class="divider" *ngIf="i < crumbs.length - 1"></span>
+</div>

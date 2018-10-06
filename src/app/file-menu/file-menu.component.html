@@ -1,0 +1,13 @@
+<div class="separator">Libraries</div>
+<div class="menu-item"
+  *ngFor="let library of libraries"
+  (click)="getLibraryContent(library)">
+  {{library}}
+</div>
+
+<div class="separator">Drives</div>
+<div class="menu-item"
+  *ngFor="let drive of drives"
+  (click)="getDriveContent(drive)">
+  Local Drive ({{drive}})
+</div>

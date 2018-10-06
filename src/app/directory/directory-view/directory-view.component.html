@@ -1,0 +1,30 @@
+<fe-breadcrumbs [crumbs]="directoryHistory" (switchDirectory)="navigateBackInHistory($event.file, $event.index)"></fe-breadcrumbs>
+<ng-container *ngIf="directoryContent?.length > 0; else noFiles">
+  <div class="header" [style.padding-right]="headerPadding">
+    <p class="name">Name</p>
+    <p class="size">Size</p>
+    <p class="last-modified">Last modified</p>
+  </div>
+  <div #directory class="directory">
+    <ng-container *ngFor="let file of directoryContent">
+      <div class="item directory-item" *ngIf="file.isDirectory" (click)="navigateToDirectory(file)">
+        <img height="20" width="20" src="../assets/filetypes/folder.svg" alt="">
+        <p class="name">{{file.name}}</p>
+        <p class="last-modified">{{file.lastModified | date: 'dd.MM.yy hh:mm'}}</p>
+      </div>
+
+      <div class="item file-item" *ngIf="!file.isDirectory" (click)="openFile.emit(file)">
+        <img height="25" width="25" [src]="'../assets/filetypes/' + file.fileExtension + '.svg'" alt="">
+        <p class="name">{{file.name}}</p>
+        <p class="size">{{file.size}}</p>
+        <p class="last-modified">{{file.lastModified | date: 'dd.MM.yy hh:mm'}}</p>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-template #noFiles>
+  <div class="no-files">
+    This directory is empty.
+  </div>
+</ng-template>
