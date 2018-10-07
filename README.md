@@ -13,9 +13,11 @@ Simply run `npm install` or `yarn`
 I'd recommend to run `yarn start` or `npm start` and then run electron via `yarn electron` or `npm run electron`
 so you can restart electron independently from Angular and use the hot-module replacement from Angular.
 
-`client` contains all the electron/browser related files
-`src` contains all the Angular/renderer related files
-`shared` contains some models etc. that needs to be shared between browser/renderer
+| Directory | Description                                                                |
+| --------- | -------------------------------------------------------------------------- |
+|`client`   | contains all the electron/browser related files                            |
+|`src`      | contains all the Angular/renderer related files                            |
+|`shared`   | contains some models etc. that needs to be shared between browser/renderer |
 
 ## Building
 
